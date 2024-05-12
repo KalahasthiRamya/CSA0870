@@ -1,0 +1,11 @@
+m=eval(input("Enter the number of fresh loaves purchased: \n"))
+n=eval(input("Enter the number of day old loaves purchased: \n"))
+Regular_price=185 #in Rs.
+Old_price=185*0.6 #in Rs.
+print("Regular price: %0.2f"%Regular_price)
+new_loaves=m*Regular_price
+print("Amount of new loaves: %0.2f"%new_loaves)
+old_loaves=n*Old_price
+print("Amount of old loaves: %0.2f"%old_loaves)
+Total=new_loaves+old_loaves
+print("Total amount: %0.2f"%Total)
