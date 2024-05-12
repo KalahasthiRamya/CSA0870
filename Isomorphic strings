@@ -1,0 +1,19 @@
+def is_isomorphic(s: str, t: str) -> bool:
+    if len(s) != len(t):
+        return False
+    
+    mapping_s = {}
+    mapping_t = {}
+    
+    for char_s, char_t in zip(s, t):
+        if char_s not in mapping_s and char_t not in mapping_t:
+            mapping_s[char_s] = char_t
+            mapping_t[char_t] = char_s
+        elif mapping_s.get(char_s) != char_t or mapping_t.get(char_t) != char_s:
+            return False
+    
+    return True
+
+s1 = "apples"
+t1 = "apple"
+print(is_isomorphic(s1, t1))  # Output: True
